@@ -2,6 +2,9 @@ package com.rsvalerio;
 
 
 public class Main {
+	
+	// test pmd plugin
+	String test;
 
 	/**
 	 * @param args
