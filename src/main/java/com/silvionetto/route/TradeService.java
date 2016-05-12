@@ -31,6 +31,7 @@ public class TradeService  extends RouteBuilder {
         from("file:data/csv/inbox?fileName=Example.csv&noop=true")
                 .to("direct:csv.transformer")
                 .to("direct:update.trade")
+                .to("direct:show.trades")
         ;
 
         from("direct:update.trade")
@@ -43,17 +44,20 @@ public class TradeService  extends RouteBuilder {
                         }
                     }
                 })
-                .process(new Processor() {
-                    @Override
-                    public void process(Exchange exchange) throws Exception {
-                        Iterator<Trade> trades = dataBase.values().iterator();
-                        Trade t = null;
-                        while(trades.hasNext()) {
-                            t = trades.next();
-                            System.out.println(t);
-                        }
+        ;
+
+        from("direct:show.trades")
+            .process(new Processor() {
+                @Override
+                public void process(Exchange exchange) throws Exception {
+                    Iterator<Trade> trades = dataBase.values().iterator();
+                    Trade t = null;
+                    while(trades.hasNext()) {
+                        t = trades.next();
+                        System.out.println(t);
                     }
-                })
+                }
+            })
         ;
     }
 
