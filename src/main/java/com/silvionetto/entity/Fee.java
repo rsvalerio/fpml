@@ -1,4 +1,4 @@
-package com.rsvalerio.route.entity;
+package com.silvionetto.entity;
 
 import java.io.Serializable;
 import java.util.Calendar;
@@ -9,12 +9,17 @@ import java.util.Currency;
  */
 public class Fee implements Serializable {
 
+    private static int count = 0;
+
     private int id;
     private String type;
     private Currency currency;
     private Calendar date;
 
     public int getId() {
+        if (id == 0) {
+            id = count++;
+        }
         return id;
     }
 

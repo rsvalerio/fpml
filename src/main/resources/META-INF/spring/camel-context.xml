@@ -8,8 +8,8 @@
        http://camel.apache.org/schema/spring/camel-spring.xsd">
 
 	<camelContext xmlns="http://camel.apache.org/schema/spring">
-		<package>com.rsvalerio.route</package>
-		<jmxAgent id="agent" mbeanObjectDomainName="rsvalerio.com"
+		<package>com.silvionetto.route</package>
+		<jmxAgent id="agent" mbeanObjectDomainName="silvionetto.com"
 			createConnector="true" registryPort="2000" />
 	</camelContext>
 
