@@ -1,12 +1,14 @@
 package com.rsvalerio.route.entity;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Currency;
+import java.util.Vector;
 
 /**
  * Created by silvionetto on 5/12/16.
  */
-public class Trade {
+public class Trade implements Serializable {
 
     private int id;
     private Calendar date;

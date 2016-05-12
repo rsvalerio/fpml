@@ -1,12 +1,13 @@
 package com.rsvalerio.route.entity;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Currency;
 
 /**
  * Created by silvionetto on 5/12/16.
  */
-public class Fees {
+public class Fee implements Serializable {
 
     private int id;
     private String type;
