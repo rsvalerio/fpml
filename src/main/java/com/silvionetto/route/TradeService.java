@@ -11,7 +11,7 @@ import java.util.*;
 /**
  * Created by silvionetto on 5/12/16.
  */
-public class Main  extends RouteBuilder {
+public class TradeService  extends RouteBuilder {
 
     private static int count = 0;
 
